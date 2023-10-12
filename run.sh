@@ -56,15 +56,11 @@ rm -rf ./package/addons/luci-app-oled
 
 git clone https://github.com/jerrykuku/luci-theme-argon.git ./package/argon/luci-theme-argon --depth=1 
 
-git clone https://github.com/vernesong/OpenClash ./package/luci-app-openclash --depth=1
-
 git clone https://github.com/sirpdboy/luci-app-partexp ./package/luci-app-partexp --depth=1
 
 git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/argon/luci-app-argon-config --depth=1 
 
 git clone https://github.com/Kazagumo/luci-app-3ginfo-lite-zhcn ./package/luci-app-3ginfo-lite-zhcn --depth=1 
-
-git clone https://github.com/4IceG/luci-app-sms-tool ./package/luci-app-sms-tool --depth=1 
 
 git clone https://github.com/Kazagumo/luci-app-oled ./package/luci-app-oled-mod --depth=1 
 
@@ -103,22 +99,6 @@ wifi up
 EOF
 
 chmod +x files/etc/uci-defaults/99-custom
-
-mkdir -p files/etc/openclash/core
-
-CLASH_DEV_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master/dev/clash-linux-arm64.tar.gz"
-#CLASH_TUN_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master/premium/clash-linux-arm64-2023.03.04.gz"
-CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz"
-GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
-GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
-
-wget -qO- $CLASH_DEV_URL | tar xOvz > files/etc/openclash/core/clash
-#wget -qO- $CLASH_TUN_URL | gunzip -c > files/etc/openclash/core/clash_tun
-wget -qO- $CLASH_META_URL | tar xOvz > files/etc/openclash/core/clash_meta
-wget -qO- $GEOIP_URL > files/etc/openclash/GeoIP.dat
-wget -qO- $GEOSITE_URL > files/etc/openclash/GeoSite.dat
-
-chmod +x files/etc/openclash/core/clash*
 
 #所有操作执行完毕 
 cd $backup
