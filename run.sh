@@ -60,10 +60,6 @@ git clone https://github.com/sirpdboy/luci-app-partexp ./package/luci-app-partex
 
 git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/argon/luci-app-argon-config --depth=1 
 
-git clone https://github.com/Kazagumo/luci-app-3ginfo-lite-zhcn ./package/luci-app-3ginfo-lite-zhcn --depth=1 
-
-git clone https://github.com/Kazagumo/luci-app-oled ./package/luci-app-oled-mod --depth=1 
-
 git clone https://github.com/gSpotx2f/luci-app-temp-status ./package/luci-app-temp-status --depth=1
 
 git clone https://github.com/Kazagumo/luci-app-cpufreq ./package/luci-app-cpufreq --depth=1
